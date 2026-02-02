@@ -454,17 +454,19 @@
             left: 0;
         }
 
-        .vena {
-            position: absolute;
-            width: 1px;
-            height: 100%;
-            left: 50%;
-            background: linear-gradient(to bottom,
-                    rgba(15, 40, 60, 0.5),
-                    rgba(20, 60, 90, 0.7) 50%,
-                    rgba(15, 40, 60, 0.5));
-            transform-origin: bottom center;
-        }
+       .vena {
+    position: absolute;
+    width: 1px;
+    height: 80%; /* Reducido de 100% a 80% */
+    left: 50%;
+    /* AÑADE ESTA LÍNEA: */
+    bottom: 0; /* Esto asegura que las venas empiecen desde la base */
+    background: linear-gradient(to bottom,
+            rgba(15, 40, 60, 0.5),
+            rgba(20, 60, 90, 0.7) 50%,
+            rgba(15, 40, 60, 0.5));
+    transform-origin: bottom center;
+}
 
         .vena:nth-child(1) {
             transform: translateX(-50%) rotate(-15deg);
@@ -472,6 +474,7 @@
 
         .vena:nth-child(2) {
             transform: translateX(-50%) rotate(-7deg);
+            height: 93% !important;
         }
 
         .vena:nth-child(3) {
@@ -481,10 +484,12 @@
 
         .vena:nth-child(4) {
             transform: translateX(-50%) rotate(7deg);
+            height: 93% !important;
         }
 
         .vena:nth-child(5) {
             transform: translateX(-50%) rotate(15deg);
+            
         }
 
         .centro {
