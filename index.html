@@ -1582,6 +1582,8 @@
         }
 
         @media (max-width: 768px) {
+
+        
             body {
                 flex-direction: column;
                 justify-content: flex-start;
@@ -1679,13 +1681,20 @@
                 flex-direction: row-reverse;
             }
 
-            .mariposa-flutter::before, .mariposa-flutter::after {
-    position: absolute;
-    top: 5%;
-    content: "";
-    height: 100%;
-    width: 110%;
+            .mariposa-flutter::before,
+            .mariposa-flutter::after {
+                position: absolute;
+                top: 5%;
+                content: "";
+                height: 100%;
+                width: 110%;
             }
+
+            .rain-container {
+    
+    transform: rotate(88deg);
+}
+
         }
 
         @media (max-width: 480px) {
@@ -2633,7 +2642,7 @@
         let currentChar = 0;
         let animationFrameId = null;
         let lastTime = 0;
-        const frameInterval = 50; // ms entre caracteres
+        const frameInterval = 20; // ms entre caracteres
 
         function typeWriter(timestamp) {
             if (!lastTime) lastTime = timestamp;
