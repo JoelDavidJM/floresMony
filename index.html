@@ -2642,7 +2642,7 @@
         let currentChar = 0;
         let animationFrameId = null;
         let lastTime = 0;
-        const frameInterval = 20; // ms entre caracteres
+        const frameInterval = 5; // ms entre caracteres
 
         function typeWriter(timestamp) {
             if (!lastTime) lastTime = timestamp;
@@ -2684,7 +2684,7 @@
                     // Pequeña pausa entre líneas
                     setTimeout(() => {
                         animationFrameId = requestAnimationFrame(typeWriter);
-                    }, 500);
+                    }, 50);
                 }
             } else {
                 // Limpiar el animation frame cuando termina
